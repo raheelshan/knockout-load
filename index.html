@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script src="jquery.js"></script>
+		<script src="knockout.js"></script>
+		<script src="knockout.load.js"></script>
+		
+		<script>
+		//viewmodel 
+		var home = function(){
+			var self = this
+			self.name = ko.observable('Raheel')
+		}
+
+		var nameEditorComponent = {
+			viewModel:home,
+			template:ko.load.view('components/views/home') // Load view file
+		}	
+
+		ko.components.register('name-editor',nameEditorComponent)
+
+	    $('document').ready(function () {
+	    	ko.applyBindings()
+	    })
+
+		</script>
+
+	</head>
+	<body>
+
+	<name-editor></name-editor>
+
+	</body>
+</html>

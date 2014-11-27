@@ -36,8 +36,6 @@ Simply use a function ko.load.view
 
 And now
 
-<pre>
+```html
 	<name-editor></name-editor>    
-</pre>
-
-
+```
